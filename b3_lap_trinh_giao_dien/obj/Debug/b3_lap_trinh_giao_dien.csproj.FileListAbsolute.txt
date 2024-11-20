@@ -1,0 +1,5 @@
+C:\Users\anhbp\source\repos\Phan2_Lap_trinh_giao_dien\b3_lap_trinh_giao_dien\obj\Debug\b3_lap_trinh_giao_dien.csproj.AssemblyReference.cache
+C:\Users\anhbp\source\repos\Phan2_Lap_trinh_giao_dien\b3_lap_trinh_giao_dien\obj\Debug\b3_lap_trinh_giao_dien.Form1.resources
+C:\Users\anhbp\source\repos\Phan2_Lap_trinh_giao_dien\b3_lap_trinh_giao_dien\obj\Debug\b3_lap_trinh_giao_dien.Properties.Resources.resources
+C:\Users\anhbp\source\repos\Phan2_Lap_trinh_giao_dien\b3_lap_trinh_giao_dien\obj\Debug\b3_lap_trinh_giao_dien.csproj.GenerateResource.cache
+C:\Users\anhbp\source\repos\Phan2_Lap_trinh_giao_dien\b3_lap_trinh_giao_dien\obj\Debug\b3_lap_trinh_giao_dien.csproj.CoreCompileInputs.cache
