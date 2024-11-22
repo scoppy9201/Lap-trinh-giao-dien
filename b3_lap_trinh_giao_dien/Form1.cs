@@ -38,6 +38,44 @@ namespace b3_lap_trinh_giao_dien
             }
             // Lấy thông tin thư mục
             DirectoryInfo dir = new DirectoryInfo(txtPath.Text);
+            lvwDanhSach.Items.Clear();
+            foreach (DirectoryInfo subDir in dir.GetDirectories())
+            {
+                itemLV = new ListViewItem(subDir.Name); // tên 
+                itemLV.SubItems.Add("Folder"); // loại 
+                itemLV.SubItems.Add(subDir.LastWriteTime.ToString()); // ngày 
+                itemLV.SubItems.Add(""); // kich thuoc
+                lvwDanhSach.Items.Add(itemLV);
+            }
+            foreach (FileInfo subFile in dir.GetFiles())
+            {
+                itemLV = new ListViewItem(subFile.Name);
+                itemLV.SubItems.Add("File");
+                itemLV.SubItems.Add(subFile.LastWriteTime.ToString());
+                itemLV.SubItems.Add(subFile.Length.ToString());
+                lvwDanhSach.Items.Add(itemLV);
+            }
         }
+        private void lvwDanhSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvwDanhSach.SelectedItems.Count == 0)
+             return;
+
+        // lay thu muc dang chon 
+         ListViewItem selecttedItem = lvwDanhSach.SelectedItems[0];
+
+        // gán giá tri cảu các côt vào textbox
+        txtName.Text = selecttedItem.Text;
+        txtDate.Text = selecttedItem.SubItems[2].Text;
+        txtSize.Text = selecttedItem.SubItems[3].Text;
+
+        if (selecttedItem.SubItems[1].Text == "File")
+        {
+            cboType.SelectedItem = "File";
+        }else if (selecttedItem.SubItems[1].Text == "Folder")
+        {
+            cboType.SelectedItem = "Folder";
+        }    
     }
+}
 }
