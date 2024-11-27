@@ -1,0 +1,114 @@
+- Truy cập vào SQL Server
+- Sd CTRL+N hoặc nút New Query tạo giao diện Query Editor
+- Trong cửa sổ Query Editor thực hiện tạo Database
+1. Tạo CSDL
+CREATE DATABASE QuanLySinhVien; // QuanLySinhVien chỉ là tên gọi Database
+GO
+USE QuanLySinhVien;
+GO
+
+2. Tạo các Tables
+*Bảng khoa: 
+CREATE TABLE Khoa (
+    MaKhoa NVARCHAR(10) PRIMARY KEY,
+    TenKhoa NVARCHAR(255),
+    NienKhoa NVARCHAR(50)
+);
+*Bảng ChuyenNganh:
+CREATE TABLE ChuyenNganh (
+    MaNganh NVARCHAR(10) PRIMARY KEY,
+    TenNganh NVARCHAR(255)
+);
+*Bảng lớp
+CREATE TABLE Lop (
+    MaLop NVARCHAR(10) PRIMARY KEY,
+    MaKhoa NVARCHAR(10) FOREIGN KEY REFERENCES Khoa(MaKhoa),
+    MaNganh NVARCHAR(10) FOREIGN KEY REFERENCES ChuyenNganh(MaNganh),
+    TenLop NVARCHAR(255),
+    GVCN NVARCHAR(255),
+    SDT NVARCHAR(15)
+);
+*Bảng SinhVien
+CREATE TABLE SinhVien (
+    MaSV NVARCHAR(10) PRIMARY KEY,
+    MaLop NVARCHAR(10) FOREIGN KEY REFERENCES Lop(MaLop),
+    HoTen NVARCHAR(255),
+    NgaySinh DATE,
+    GioiTinh BIT,
+    SDT NVARCHAR(15),
+    DiaChi NVARCHAR(MAX)
+);
+*Bảng Monhoc
+CREATE TABLE MonHoc (
+    MaMon NVARCHAR(10) PRIMARY KEY,
+    TenMon NVARCHAR(255),
+    SoTiet INT
+);
+CREATE TABLE KetQua (
+    MaSV NVARCHAR(10),
+    MaMon NVARCHAR(10),
+    DiemHS1 FLOAT,
+    DiemHS2 FLOAT,
+    DiemThi FLOAT,
+    DiemThiLai FLOAT,
+    PRIMARY KEY (MaSV, MaMon),
+    FOREIGN KEY (MaSV) REFERENCES SinhVien(MaSV),
+    FOREIGN KEY (MaMon) REFERENCES MonHoc(MaMon)
+);
+
+3.Kết nối dữ liệu 
+-- Thêm dữ liệu mẫu
+INSERT INTO Khoa VALUES ('KH01', N'Khoa Công Nghệ Thông Tin', '2020-2024');
+INSERT INTO ChuyenNganh VALUES ('CN01', N'Công Nghệ Phần Mềm');
+INSERT INTO Lop VALUES ('L01', 'KH01', 'CN01', N'Lớp CNTT 01', N'Trần Văn A', '0123456789');
+INSERT INTO SinhVien VALUES ('SV01', 'L01', N'Bùi Mạnh Hưng', '2005-05-31', 1, '0987654321', N'Hà Nội');
+INSERT INTO MonHoc VALUES ('MH01', N'Tin Học Cơ Sở', 45);
+INSERT INTO KetQua VALUES ('SV01', 'MH01', 8.5, 7.0, 6.0, NULL);
+
+-- Kiểm tra dữ liệu
+SELECT * FROM Khoa;
+SELECT * FROM SinhVien;
+SELECT * FROM KetQua;
+
+// thưc hiện chuyển đổi từ Connection form sáng App.config
+- tại References thực hiện add hư viện System.Configuration
+- trong file của App.config thực hiện cấu hình: 
++ <connectionStrings>
+	<add name = "QuanLySinhVieConectionString"
+	     connectionString="Data Source=.; Initial Catalog=QuanLySinhVien; Integrated Security=True"
+	     providerName="System.Data.SqlClient" />
+ </connectionStrings>
+=> Cấu lenh này cho phép lấy chuỗi kết nối một cách tự động 
+- trong code form thực hiện chuyên đổi: 
++  string connString = @"Data Source=.; Initial Catalog=QuanLySinhVien; Integrated Security=True";
+=> string connString = ConfigurationManager.ConnectionStrings["QuanLySinhVienConnectionString"].ConnectionString;
+=> để chia sẻ cho tất cả các instance cua lop thi nên sd static giúp khai báo connString và conn 1 lần duy nhất mà vẫn có thể chia se va tái sử dụng nhiều lần 
+=> private static readonly string coonString = ConfigurationManager.CnnectionStrings["QuanLySinhVienConnectionString"].ConnecionString;
+
+// tinh chinh Control DataGirdview 
+1. Tự động điều chỉnh kích thước cột
+- Tìm thuộc tính AutoSizeColumnsMode.
+- Chọn một trong các giá trị phù hợp:
+	+ Fill: Các cột tự động giãn để lấp đầy chiều rộng của DataGridView.
+	+ AllCells: Kích thước của cột sẽ vừa đủ với nội dung trong tất cả các ô.
+	+ DisplayedCells: Kích thước của cột sẽ vừa đủ với nội dung của các ô hiển thị.
+2. Căn giữa dữ liệu trong ô
+ - Tìm thuộc tính DefaultCellStyle:
+ - Nhấp vào nút ... ở bên phải thuộc tính.
+ - Trong hộp thoại, tìm phần Alignment và đặt giá trị thành MiddleCenter.
+ - Nhấn OK để áp dụng.
+3. Căn giữa tiêu đề cột
+ - Tìm thuộc tính ColumnHeadersDefaultCellStyle:
+ - Nhấp vào nút ... ở bên phải thuộc tính.
+ - Trong hộp thoại, tìm phần Alignment và đặt giá trị thành MiddleCenter.
+ - Nhấn OK để áp dụng.
+4. Tự động điều chỉnh chiều cao của hàng
+ - Tìm thuộc tính AutoSizeRowsMode.
+ - Đặt giá trị thành AllCells để hàng tự động điều chỉnh chiều cao theo nội dung.
+5. Điều chỉnh chiều rộng cột cụ thể
+ - Nhấp chuột phải vào DataGridView.
+ - Chọn Edit Columns....
+ - Trong hộp thoại hiện ra:
+ - Chọn từng cột từ danh sách bên trái.
+ - Tìm thuộc tính Width và đặt giá trị cụ thể (ví dụ: 150).
+ - Lặp lại cho các cột khác nếu cần.
