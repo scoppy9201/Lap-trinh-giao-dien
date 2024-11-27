@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace B6_lap_trinh_giao_dien
+namespace B4_lap_trinh_giao_dien
 {
     public partial class Form1 : Form
     {
@@ -17,90 +17,61 @@ namespace B6_lap_trinh_giao_dien
             InitializeComponent();
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnNhap_Click(object sender, EventArgs e)
-        {
-            // kiểm tra nếu textbox trống 
-            if (string.IsNullOrWhiteSpace(txtHoTen.Text))
+            if (String.IsNullOrEmpty(txtNhapTen.Text))
             {
-                MessageBox.Show("Vui lòng nhạp họ tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui long nhâp tên khách hàng trước khi thanh toán!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Warning); 
+                txtNhapTen.Focus();
                 return;
             }
 
-            // thêm tên vào danh sách lớp A
-            lstA.Items.Add(txtHoTen.Text);
-            txtHoTen.Clear(); // xóa textbox sau khi thêm
-            txtHoTen.Focus(); // con tro quay lại textbox
+            // hiển thị thông báo in hóa đơn
+            MessageBox.Show("Hóa đã được in thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // đóng form in
+            this.Close();
         }
 
-        private void btnChuyen1_Click(object sender, EventArgs e)
+        private void btnTongTien_Click(object sender, EventArgs e) // nút tổng tiền
         {
-            // chuyển 1 sinh viên từ lớp A sang lớp B
-            if (lstA.SelectedItem != null)
+            if (String.IsNullOrEmpty(txtNhapTen.Text))
             {
-                lstB.Items.Add(lstA.SelectedItem); // thêm 1 sinh viên từ lớp A sáng lớp B 
-                lstA.Items.Remove(lstA.SelectedItem); // xó sinh viên vửa thêm ra khỏi lớp A 
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn sinh viên cần chuyển!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNhapTen.Focus();  // chuyển con trỏ về ô nhập tên khách hàng 
                 return;
             }
+
+            // tỉnh tổng tiền 
+            double sum = 0;
+
+            // kiem tra cac dich vu 
+            if(chkCaoVoi.Checked) sum += 100000;
+            if(chkTayTrang.Checked) sum += 1200000;
+            if (chkChupHinhRang.Checked) sum += 200000;
+
+            // tinh tien tram rang 
+            int soLuongTram = (int)nudTramRang.Value; // Lấy số lượng từ NumericUpDown
+            double tienTram = soLuongTram * 80000;
+            sum += tienTram;
+
+            // hien thi tong tien 
+            txtTongThanhTien.Text = sum.ToString("N0") + "VNĐ"; // hiển thị sô với dấu định dạng phân cách
         }
 
-        private void btnChuyenAll_Click(object sender, EventArgs e)
-        {
-            // chuyển tất cả sinh viên từ lớp A sáng lớp B 
-            foreach (var item in lstA.Items)
-            {
-                lstB.Items.Add(item);
-            }
-            lstA.Items.Clear(); // xóa toàn bọ lớp A sau khi chuyển
-        }
-
-        private void btnChuyenNguoc1_Click(object sender, EventArgs e)
-        {
-            if (lstB.SelectedItem != null)
-            {
-                lstA.Items.Add(lstB.SelectedItem);
-                lstB.Items.Remove(lstB.SelectedItem);
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn sinh viên cần chuyển!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-        }
-
-        private void btnChuyenNguocAll_Click(object sender, EventArgs e)
-        {
-            foreach (var item in lstB.Items)
-            {
-                lstA.Items.Add(item);
-            }
-            lstB.Items.Clear();
-        }
-
-        private void btnXoaTrang_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa toàn bộ danh sách lớp A không ?", "Xác nhậm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                lstA.Items.Clear();
-            }
-        }
-
-        private void btnKetThuc_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

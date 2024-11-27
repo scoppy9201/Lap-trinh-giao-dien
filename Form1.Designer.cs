@@ -1,4 +1,4 @@
-﻿namespace B6_lap_trinh_giao_dien
+﻿namespace B4_lap_trinh_giao_dien
 {
     partial class Form1
     {
@@ -28,200 +28,243 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblLopA = new System.Windows.Forms.Label();
-            this.lblLopB = new System.Windows.Forms.Label();
-            this.lblNhaphoten = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.lstA = new System.Windows.Forms.ListBox();
-            this.lstB = new System.Windows.Forms.ListBox();
-            this.btnChuyenNguocAll = new System.Windows.Forms.Button();
-            this.btnKetThuc = new System.Windows.Forms.Button();
-            this.btnNhap = new System.Windows.Forms.Button();
-            this.btnXoaTrang = new System.Windows.Forms.Button();
-            this.btnChuyen1 = new System.Windows.Forms.Button();
-            this.btnChuyenNguoc1 = new System.Windows.Forms.Button();
-            this.btnChuyenAll = new System.Windows.Forms.Button();
+            this.lblTieuDe = new System.Windows.Forms.Label();
+            this.lblTenKhachHang = new System.Windows.Forms.Label();
+            this.txtNhapTen = new System.Windows.Forms.TextBox();
+            this.lblDichVu = new System.Windows.Forms.Label();
+            this.chkCaoVoi = new System.Windows.Forms.CheckBox();
+            this.chkTayTrang = new System.Windows.Forms.CheckBox();
+            this.chkChupHinhRang = new System.Windows.Forms.CheckBox();
+            this.lblTramRang = new System.Windows.Forms.Label();
+            this.nudTramRang = new System.Windows.Forms.NumericUpDown();
+            this.lblCaoVoi = new System.Windows.Forms.Label();
+            this.lblTayTrang = new System.Windows.Forms.Label();
+            this.lblChupHinhRang = new System.Windows.Forms.Label();
+            this.lblTramRangTien = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTongThanhTien = new System.Windows.Forms.TextBox();
+            this.btnTongTien = new System.Windows.Forms.Button();
+            this.btnInvaDong = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTramRang)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblLopA
+            // lblTieuDe
             // 
-            this.lblLopA.AutoSize = true;
-            this.lblLopA.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLopA.Location = new System.Drawing.Point(40, 119);
-            this.lblLopA.Name = "lblLopA";
-            this.lblLopA.Size = new System.Drawing.Size(57, 23);
-            this.lblLopA.TabIndex = 0;
-            this.lblLopA.Text = "Lớp A";
+            this.lblTieuDe.AutoSize = true;
+            this.lblTieuDe.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDe.Location = new System.Drawing.Point(199, 32);
+            this.lblTieuDe.Name = "lblTieuDe";
+            this.lblTieuDe.Size = new System.Drawing.Size(453, 39);
+            this.lblTieuDe.TabIndex = 0;
+            this.lblTieuDe.Text = "Hóa Đơn Dịch Vụ Làm Răng";
+            this.lblTieuDe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblLopB
+            // lblTenKhachHang
             // 
-            this.lblLopB.AutoSize = true;
-            this.lblLopB.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLopB.Location = new System.Drawing.Point(337, 119);
-            this.lblLopB.Name = "lblLopB";
-            this.lblLopB.Size = new System.Drawing.Size(57, 23);
-            this.lblLopB.TabIndex = 1;
-            this.lblLopB.Text = "Lớp B";
+            this.lblTenKhachHang.AutoSize = true;
+            this.lblTenKhachHang.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenKhachHang.Location = new System.Drawing.Point(59, 112);
+            this.lblTenKhachHang.Name = "lblTenKhachHang";
+            this.lblTenKhachHang.Size = new System.Drawing.Size(200, 32);
+            this.lblTenKhachHang.TabIndex = 1;
+            this.lblTenKhachHang.Text = "Tên Khách Hàng:";
             // 
-            // lblNhaphoten
+            // txtNhapTen
             // 
-            this.lblNhaphoten.AutoSize = true;
-            this.lblNhaphoten.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNhaphoten.Location = new System.Drawing.Point(24, 73);
-            this.lblNhaphoten.Name = "lblNhaphoten";
-            this.lblNhaphoten.Size = new System.Drawing.Size(112, 23);
-            this.lblNhaphoten.TabIndex = 2;
-            this.lblNhaphoten.Text = "Nhập họ tên:";
+            this.txtNhapTen.Location = new System.Drawing.Point(406, 120);
+            this.txtNhapTen.Name = "txtNhapTen";
+            this.txtNhapTen.Size = new System.Drawing.Size(394, 27);
+            this.txtNhapTen.TabIndex = 2;
             // 
-            // lblTitle
+            // lblDichVu
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(119, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(302, 35);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "DANH SÁCH SINH VIÊN ";
+            this.lblDichVu.AutoSize = true;
+            this.lblDichVu.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDichVu.Location = new System.Drawing.Point(63, 184);
+            this.lblDichVu.Name = "lblDichVu";
+            this.lblDichVu.Size = new System.Drawing.Size(105, 32);
+            this.lblDichVu.TabIndex = 3;
+            this.lblDichVu.Text = "Dịch Vụ:";
             // 
-            // txtHoTen
+            // chkCaoVoi
             // 
-            this.txtHoTen.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(144, 70);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(252, 28);
-            this.txtHoTen.TabIndex = 4;
-            this.txtHoTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.chkCaoVoi.AutoSize = true;
+            this.chkCaoVoi.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCaoVoi.Location = new System.Drawing.Point(123, 237);
+            this.chkCaoVoi.Name = "chkCaoVoi";
+            this.chkCaoVoi.Size = new System.Drawing.Size(114, 36);
+            this.chkCaoVoi.TabIndex = 4;
+            this.chkCaoVoi.Text = "Cạo Vôi";
+            this.chkCaoVoi.UseVisualStyleBackColor = true;
             // 
-            // lstA
+            // chkTayTrang
             // 
-            this.lstA.BackColor = System.Drawing.SystemColors.Menu;
-            this.lstA.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstA.FormattingEnabled = true;
-            this.lstA.ItemHeight = 23;
-            this.lstA.Location = new System.Drawing.Point(42, 155);
-            this.lstA.Name = "lstA";
-            this.lstA.Size = new System.Drawing.Size(185, 280);
-            this.lstA.TabIndex = 5;
+            this.chkTayTrang.AutoSize = true;
+            this.chkTayTrang.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTayTrang.Location = new System.Drawing.Point(123, 295);
+            this.chkTayTrang.Name = "chkTayTrang";
+            this.chkTayTrang.Size = new System.Drawing.Size(144, 36);
+            this.chkTayTrang.TabIndex = 5;
+            this.chkTayTrang.Text = "Tẩy Trắng";
+            this.chkTayTrang.UseVisualStyleBackColor = true;
             // 
-            // lstB
+            // chkChupHinhRang
             // 
-            this.lstB.BackColor = System.Drawing.SystemColors.Menu;
-            this.lstB.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstB.FormattingEnabled = true;
-            this.lstB.ItemHeight = 23;
-            this.lstB.Location = new System.Drawing.Point(331, 155);
-            this.lstB.Name = "lstB";
-            this.lstB.Size = new System.Drawing.Size(176, 280);
-            this.lstB.TabIndex = 6;
-            this.lstB.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            this.chkChupHinhRang.AutoSize = true;
+            this.chkChupHinhRang.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkChupHinhRang.Location = new System.Drawing.Point(123, 355);
+            this.chkChupHinhRang.Name = "chkChupHinhRang";
+            this.chkChupHinhRang.Size = new System.Drawing.Size(211, 36);
+            this.chkChupHinhRang.TabIndex = 6;
+            this.chkChupHinhRang.Text = "Chụp Hình Răng";
+            this.chkChupHinhRang.UseVisualStyleBackColor = true;
             // 
-            // btnChuyenNguocAll
+            // lblTramRang
             // 
-            this.btnChuyenNguocAll.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnChuyenNguocAll.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenNguocAll.Location = new System.Drawing.Point(245, 366);
-            this.btnChuyenNguocAll.Name = "btnChuyenNguocAll";
-            this.btnChuyenNguocAll.Size = new System.Drawing.Size(60, 34);
-            this.btnChuyenNguocAll.TabIndex = 7;
-            this.btnChuyenNguocAll.Text = "<<";
-            this.btnChuyenNguocAll.UseVisualStyleBackColor = false;
-            this.btnChuyenNguocAll.Click += new System.EventHandler(this.btnChuyenNguocAll_Click);
+            this.lblTramRang.AutoSize = true;
+            this.lblTramRang.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTramRang.Location = new System.Drawing.Point(122, 415);
+            this.lblTramRang.Name = "lblTramRang";
+            this.lblTramRang.Size = new System.Drawing.Size(143, 32);
+            this.lblTramRang.TabIndex = 7;
+            this.lblTramRang.Text = "Trám Răng:";
             // 
-            // btnKetThuc
+            // nudTramRang
             // 
-            this.btnKetThuc.BackColor = System.Drawing.Color.IndianRed;
-            this.btnKetThuc.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKetThuc.Location = new System.Drawing.Point(402, 464);
-            this.btnKetThuc.Name = "btnKetThuc";
-            this.btnKetThuc.Size = new System.Drawing.Size(115, 34);
-            this.btnKetThuc.TabIndex = 8;
-            this.btnKetThuc.Text = "Kết thúc";
-            this.btnKetThuc.UseVisualStyleBackColor = false;
-            this.btnKetThuc.Click += new System.EventHandler(this.btnKetThuc_Click);
+            this.nudTramRang.BackColor = System.Drawing.SystemColors.Menu;
+            this.nudTramRang.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudTramRang.Location = new System.Drawing.Point(318, 421);
+            this.nudTramRang.Name = "nudTramRang";
+            this.nudTramRang.Size = new System.Drawing.Size(120, 28);
+            this.nudTramRang.TabIndex = 8;
+            this.nudTramRang.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // btnNhap
+            // lblCaoVoi
             // 
-            this.btnNhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNhap.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhap.Location = new System.Drawing.Point(413, 67);
-            this.btnNhap.Name = "btnNhap";
-            this.btnNhap.Size = new System.Drawing.Size(104, 34);
-            this.btnNhap.TabIndex = 9;
-            this.btnNhap.Text = "Nhập";
-            this.btnNhap.UseVisualStyleBackColor = false;
-            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            this.lblCaoVoi.AutoSize = true;
+            this.lblCaoVoi.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaoVoi.Location = new System.Drawing.Point(622, 242);
+            this.lblCaoVoi.Name = "lblCaoVoi";
+            this.lblCaoVoi.Size = new System.Drawing.Size(141, 27);
+            this.lblCaoVoi.TabIndex = 9;
+            this.lblCaoVoi.Text = "100.000 VNĐ";
             // 
-            // btnXoaTrang
+            // lblTayTrang
             // 
-            this.btnXoaTrang.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnXoaTrang.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTrang.Location = new System.Drawing.Point(42, 464);
-            this.btnXoaTrang.Name = "btnXoaTrang";
-            this.btnXoaTrang.Size = new System.Drawing.Size(114, 34);
-            this.btnXoaTrang.TabIndex = 10;
-            this.btnXoaTrang.Text = "Xóa trắng";
-            this.btnXoaTrang.UseVisualStyleBackColor = false;
-            this.btnXoaTrang.Click += new System.EventHandler(this.btnXoaTrang_Click);
+            this.lblTayTrang.AutoSize = true;
+            this.lblTayTrang.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTayTrang.Location = new System.Drawing.Point(599, 300);
+            this.lblTayTrang.Name = "lblTayTrang";
+            this.lblTayTrang.Size = new System.Drawing.Size(160, 27);
+            this.lblTayTrang.TabIndex = 10;
+            this.lblTayTrang.Text = "1.200.000 VNĐ";
             // 
-            // btnChuyen1
+            // lblChupHinhRang
             // 
-            this.btnChuyen1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnChuyen1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyen1.Location = new System.Drawing.Point(245, 182);
-            this.btnChuyen1.Name = "btnChuyen1";
-            this.btnChuyen1.Size = new System.Drawing.Size(60, 34);
-            this.btnChuyen1.TabIndex = 11;
-            this.btnChuyen1.Text = ">";
-            this.btnChuyen1.UseVisualStyleBackColor = false;
-            this.btnChuyen1.Click += new System.EventHandler(this.btnChuyen1_Click);
+            this.lblChupHinhRang.AutoSize = true;
+            this.lblChupHinhRang.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChupHinhRang.Location = new System.Drawing.Point(622, 360);
+            this.lblChupHinhRang.Name = "lblChupHinhRang";
+            this.lblChupHinhRang.Size = new System.Drawing.Size(141, 27);
+            this.lblChupHinhRang.TabIndex = 11;
+            this.lblChupHinhRang.Text = "200.000 VNĐ";
             // 
-            // btnChuyenNguoc1
+            // lblTramRangTien
             // 
-            this.btnChuyenNguoc1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnChuyenNguoc1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenNguoc1.Location = new System.Drawing.Point(245, 302);
-            this.btnChuyenNguoc1.Name = "btnChuyenNguoc1";
-            this.btnChuyenNguoc1.Size = new System.Drawing.Size(60, 34);
-            this.btnChuyenNguoc1.TabIndex = 12;
-            this.btnChuyenNguoc1.Text = "<";
-            this.btnChuyenNguoc1.UseVisualStyleBackColor = false;
-            this.btnChuyenNguoc1.Click += new System.EventHandler(this.btnChuyenNguoc1_Click);
+            this.lblTramRangTien.AutoSize = true;
+            this.lblTramRangTien.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTramRangTien.Location = new System.Drawing.Point(657, 421);
+            this.lblTramRangTien.Name = "lblTramRangTien";
+            this.lblTramRangTien.Size = new System.Drawing.Size(114, 27);
+            this.lblTramRangTien.TabIndex = 12;
+            this.lblTramRangTien.Text = "80.000/cái";
             // 
-            // btnChuyenAll
+            // label1
             // 
-            this.btnChuyenAll.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnChuyenAll.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuyenAll.Location = new System.Drawing.Point(245, 243);
-            this.btnChuyenAll.Name = "btnChuyenAll";
-            this.btnChuyenAll.Size = new System.Drawing.Size(60, 34);
-            this.btnChuyenAll.TabIndex = 13;
-            this.btnChuyenAll.Text = ">>";
-            this.btnChuyenAll.UseVisualStyleBackColor = false;
-            this.btnChuyenAll.Click += new System.EventHandler(this.btnChuyenAll_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Text", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(66, 513);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 32);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Tổng Thành Tiền =";
+            // 
+            // txtTongThanhTien
+            // 
+            this.txtTongThanhTien.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtTongThanhTien.Location = new System.Drawing.Point(340, 520);
+            this.txtTongThanhTien.Name = "txtTongThanhTien";
+            this.txtTongThanhTien.Size = new System.Drawing.Size(460, 27);
+            this.txtTongThanhTien.TabIndex = 14;
+            // 
+            // btnTongTien
+            // 
+            this.btnTongTien.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnTongTien.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTongTien.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnTongTien.Location = new System.Drawing.Point(230, 587);
+            this.btnTongTien.Name = "btnTongTien";
+            this.btnTongTien.Size = new System.Drawing.Size(171, 48);
+            this.btnTongTien.TabIndex = 15;
+            this.btnTongTien.Text = "Tổng Tiền";
+            this.btnTongTien.UseVisualStyleBackColor = false;
+            this.btnTongTien.Click += new System.EventHandler(this.btnTongTien_Click);
+            // 
+            // btnInvaDong
+            // 
+            this.btnInvaDong.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnInvaDong.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvaDong.Location = new System.Drawing.Point(429, 587);
+            this.btnInvaDong.Name = "btnInvaDong";
+            this.btnInvaDong.Size = new System.Drawing.Size(171, 48);
+            this.btnInvaDong.TabIndex = 16;
+            this.btnInvaDong.Text = "In và Đóng";
+            this.btnInvaDong.UseVisualStyleBackColor = false;
+            this.btnInvaDong.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.SystemColors.Window;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(629, 587);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(171, 48);
+            this.btnThoat.TabIndex = 17;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(549, 509);
-            this.Controls.Add(this.btnChuyenAll);
-            this.Controls.Add(this.btnChuyenNguoc1);
-            this.Controls.Add(this.btnChuyen1);
-            this.Controls.Add(this.btnXoaTrang);
-            this.Controls.Add(this.btnNhap);
-            this.Controls.Add(this.btnKetThuc);
-            this.Controls.Add(this.btnChuyenNguocAll);
-            this.Controls.Add(this.lstB);
-            this.Controls.Add(this.lstA);
-            this.Controls.Add(this.txtHoTen);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.lblNhaphoten);
-            this.Controls.Add(this.lblLopB);
-            this.Controls.Add(this.lblLopA);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(856, 675);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnInvaDong);
+            this.Controls.Add(this.btnTongTien);
+            this.Controls.Add(this.txtTongThanhTien);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTramRangTien);
+            this.Controls.Add(this.lblChupHinhRang);
+            this.Controls.Add(this.lblTayTrang);
+            this.Controls.Add(this.lblCaoVoi);
+            this.Controls.Add(this.nudTramRang);
+            this.Controls.Add(this.lblTramRang);
+            this.Controls.Add(this.chkChupHinhRang);
+            this.Controls.Add(this.chkTayTrang);
+            this.Controls.Add(this.chkCaoVoi);
+            this.Controls.Add(this.lblDichVu);
+            this.Controls.Add(this.txtNhapTen);
+            this.Controls.Add(this.lblTenKhachHang);
+            this.Controls.Add(this.lblTieuDe);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Danh sách";
+            this.Text = "Hóa Đơn Tiền Làm Răng";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudTramRang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,20 +272,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblLopA;
-        private System.Windows.Forms.Label lblLopB;
-        private System.Windows.Forms.Label lblNhaphoten;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.ListBox lstA;
-        private System.Windows.Forms.ListBox lstB;
-        private System.Windows.Forms.Button btnChuyenNguocAll;
-        private System.Windows.Forms.Button btnKetThuc;
-        private System.Windows.Forms.Button btnNhap;
-        private System.Windows.Forms.Button btnXoaTrang;
-        private System.Windows.Forms.Button btnChuyen1;
-        private System.Windows.Forms.Button btnChuyenNguoc1;
-        private System.Windows.Forms.Button btnChuyenAll;
+        private System.Windows.Forms.Label lblTieuDe;
+        private System.Windows.Forms.Label lblTenKhachHang;
+        private System.Windows.Forms.TextBox txtNhapTen;
+        private System.Windows.Forms.Label lblDichVu;
+        private System.Windows.Forms.CheckBox chkCaoVoi;
+        private System.Windows.Forms.CheckBox chkTayTrang;
+        private System.Windows.Forms.CheckBox chkChupHinhRang;
+        private System.Windows.Forms.Label lblTramRang;
+        private System.Windows.Forms.NumericUpDown nudTramRang;
+        private System.Windows.Forms.Label lblCaoVoi;
+        private System.Windows.Forms.Label lblTayTrang;
+        private System.Windows.Forms.Label lblChupHinhRang;
+        private System.Windows.Forms.Label lblTramRangTien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTongThanhTien;
+        private System.Windows.Forms.Button btnTongTien;
+        private System.Windows.Forms.Button btnInvaDong;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
 
